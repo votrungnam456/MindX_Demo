@@ -1,0 +1,176 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    background-color: #cccccc;
+    min-height: 70px;
+    padding: 15px;
+}
+
+
+
+
+@media screen and (min-width:300px) and (max-width:500px){
+    body{
+        height: 500px;
+        overflow: hidden; 
+    }
+    main {
+        height: 900px;
+
+        background-color: #dddddd;
+
+        padding: 7.5px 15px;
+        background-image: url("/images/backgroundMobile.jpg");
+        background-repeat: no-repeat;
+        background-size:500px 800px;
+    }
+    .container {
+        /* width: 400px; */
+        min-width: 100%;
+        /* margin: 80px auto; */
+        /* margin-top: 50%; */
+        /* padding: 5%; */
+    }
+    .login-form{
+        /* width: 50%; */
+        max-width: 400px;
+        /* margin: 20px auto; */
+        background-color: black;
+        opacity: 0.75;
+        padding: 15px;
+        border: 2px dotted #cccccc;
+        border-radius: 10px;
+    }
+}
+@media screen and (min-width:501px) and (max-width:1199px){
+    body{
+        height: 1400px;
+        overflow: hidden;
+    }
+    main {
+        height: 1400px;
+
+        background-color: #dddddd;
+
+        padding: 7.5px 15px;
+        background-image: url("../images/backgroundMobile.jpg");
+        background-repeat: no-repeat;
+        background-size:1200px 1400px;
+    }
+    .container {
+        /* width: 400px; */
+        min-width: 100%;
+        /* margin: 80px auto; */
+        /* margin-top: 50%; */
+        /* padding: 5%; */
+    }
+    .login-form{
+        /* width: 100%; */
+        max-width: 60%;
+        margin: 20px auto;
+        background-color: black;
+        opacity: 0.75;
+        padding: 15px;
+        border: 2px dotted #cccccc;
+        border-radius: 10px;
+    }
+} 
+@media screen and (min-width:1200px){
+    body{
+        height: 1200px;
+        overflow: hidden;
+    }
+    main {
+        background-color: #dddddd;
+        height: 1200px;
+        padding: 7.5px 15px;
+        background-image: url("/images/laptop.jpg");
+        background-repeat: no-repeat;
+        background-size:100%;
+    
+    }
+    .container {
+        width: 100%;
+        /* max-width: 1200px; */
+        margin: 80px auto;
+    }
+    .login-form{
+        width: 25%;
+        /* max-width: 400px; */
+        margin: 20px auto;
+        background-color: black;
+        opacity: 0.75;
+        padding: 15px;
+        border: 2px dotted #cccccc;
+        border-radius: 10px;
+    }
+}
+@media screen and (min-width:1400px){
+    .login-form{
+        width: 50%;
+        /* max-width: 400px; */
+        margin: 20px auto;
+        background-color: black;
+        opacity: 0.75;
+        padding: 15px;
+        border: 2px dotted #cccccc;
+        border-radius: 10px;
+    }
+}
+#btn-submit{
+    min-width: 90%;
+    margin-left:6%;
+    margin-top:5%;
+    min-height: 30px;
+}
+.form-group,#sign-up{
+    margin-left: 5%;
+    color:white;
+}
+.sign-up-btn{
+    margin-top:5%;
+    margin-left:10%;
+}
+.line{
+    margin-left: 10%;
+    margin-top: 5%;
+    margin-right: 10%;
+    border-top:1px solid gray;
+}
+a{
+    list-style-type: none;
+}
+
+input[type=text],input[type=password]{
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 10px 0;
+    min-width: 100%;
+    min-height: 30px;
+    border: 1px solid green;
+    opacity: 0.5;
+}
+#err{
+    display:none;
+    color: red;
+    margin-left:5%;
+    padding-top: 5%;
+    
+}
+input[type=text]:focus,input[type=password]:focus {
+    background-color: lightblue;
+}
+
+h1{
+    text-align: center;
+    color:white;
+    margin-bottom: 5%;
+}
+
+footer{
+    background-color: #cccccc;
+    min-height: 100px;
+    padding: 15px;
+}
