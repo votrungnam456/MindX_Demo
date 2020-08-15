@@ -14,7 +14,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
 
 		<!-- TITLE OF SITE -->
-		<title><%= title %></title>
+		<title><%= AmThuc.title2 %></title>
 
 		<!-- favicon img -->
 		<link rel="shortcut icon" type="image/icon" href="/images/logo/favicon.png"/>
@@ -89,7 +89,7 @@
 								<div class="collapse navbar-collapse">		  
 									<ul class="nav navbar-nav navbar-right">
 										<li class="smooth-menu"><a href="#home">Home</a></li>
-										<li class="smooth-menu"><a href="#gallery">Tin tức</a></li>
+										<li class="smooth-menu"><a href="#gallery">Ẩm thực</a></li>
 										<li>
 											<button class="book-btn"><a href="/login/signin">Đăng nhập</a>
 											</button>
@@ -116,7 +116,7 @@
 							<div class="single-about-us">
 								<div class="about-us-txt">
 									<h2>
-										<%= title2 %>
+										<%= AmThuc.title2 %>
 									</h2>
 								</div><!--/.about-us-txt-->
 							</div><!--/.single-about-us-->
@@ -143,30 +143,28 @@
         </section><!--/.travel-box-->
 
         <!--service start-->
-        <div id="container">
+		<div id="container">
 			<section id="gallery" class="gallery">
 				<div class="container">
 					<a href="/" style="font-size:20px">Quay lại</a>
 					<div class="gallery-details">
 						<div class="gallary-header text-center">
 							<h2>
-                                <%= tintuc.title %>
+								<%= AmThuc.title %>
 							</h2>
 						</div><!--/.gallery-header-->
 
                     </div><!--/.gallery-details-->
                     <div style="text-align: justify;">
-                        <b><%= tintuc.head1 %></b>
-                  
-                        <p>
-                            <%= tintuc.mota1 %>
-                        </p>
-                        <img src="<%= tintuc.anh1 %>"  style="width:500px;height:500px">
-                        <p><%= tintuc.mota2 %></p>
-                        <img src="<%= tintuc.anh2 %>"  style="width:500px;height:500px">
-                        <p><%= tintuc.mota3 %></p>
-                        <img src="<%= tintuc.anh3 %>"  style="width:500px;height:500px">
-                        <p><%= tintuc.mota4 %></p>
+                        <p><%= AmThuc.mota1 %></p>
+                        <img src="<%= AmThuc.anh1 %>" style="width:500px;height:500px;text-align: center;">
+                        <h3><%= AmThuc.tieude1 %></h3>
+						<p><%= AmThuc.mota2 %></p>
+                        <img src="<%= AmThuc.anh2 %>" style="width:500px;height:500px">
+                        <h3><%= AmThuc.tieude2 %></h3>
+                        <p><%= AmThuc.mota3 %></p>
+                        <img src="<%= AmThuc.anh3 %>" style="width:500px;height:500px">
+                        <p><%= AmThuc.mota4 %></p>
                     </div>
 				</div><!--/.container-->
 	
@@ -177,6 +175,7 @@
 
 
 		<%- include('share/footer')  %>
+
 
 
 

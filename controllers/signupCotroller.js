@@ -2,45 +2,32 @@ const firebase = require("firebase/app");
 require("firebase/auth")
 
 async function signupController(req,res){
-    // let btnSubmit = document.getElementById("btn-submit")
-    // btnSubmit.addEventListener('click', async ()=>{
-    // let  error = document.getElementById("err").value
-    // let genderUser 
-    // let  confirmPwd = document.getElementById('txtAgPwd').value
-    // let newUser={
-    //     pwd : document.getElementById('txtPwd').value,
-    //     displayName: document.getElementById('first-name').value+" "+document.getElementById('middle-last-name').value,
-    //     email : document.getElementById('email').value,
-    // }
-    // let genders = document.getElementsByName('gender')
 
+    let email= req.body.email
+    let pwd = req.body.pwd
+    let firstname = req.body.first-name
+    let middlelastname = req.body.middle-last-name
     console.log(req.body)
-
-    // for (var i = 0, length = genders.length; i < length; i++) {
-    //     if (genders[i].checked) {
-    //         genderUser = genders[i];
-    //         break;
-    //     }
-    // }   
-    // newUser.gender = genderUser
-    // if (newUser.displayName && newUser.email&&newUser.gender&&newUser.pwd === confirmPwd) {
-    //     try {
-    //         await firebase.auth().createUserWithEmailAndPassword(newUser.email, newUser.pwd);  
-    //         firebase.auth().currentUser.updateProfile({
-    //         newUser
-    //         }) 
-    //         firebase.auth().currentUser.sendEmailVerification();
-    //         alert("Done!!")
-    //         window.open('signin.html','_self')
-    //     } catch (error) {
-    //         // error.innerHTML = "<p>Tài khoản đã tồn tại</p>";
-    //         // error.style.display="block";
-    //     }
-    //     }
-    // else{
-    //     // error.innerHTML = "<p>Tài khoản hoặc mật khẩu không được để trống</p>";
-    //     // error.style.display="block";
-    // }  
+ 
+    if (firstname && middlelastname&&email&&pwd === req.body.Again-pwd) {
+        try {
+            await firebase.auth().createUserWithEmailAndPassword(email, pwd);  
+            firebase.auth().currentUser.updateProfile({
+            newUser
+            }) 
+            firebase.auth().currentUser.sendEmailVerification();
+            res.send(true)
+            res.render('signin',{title:'Sign in page'})
+        } catch (error) {
+            // error.innerHTML = "<p>Tài khoản đã tồn tại</p>";
+            // error.style.display="block";
+            console.log(error)
+        }
+        }
+    else{
+        // error.innerHTML = "<p>Tài khoản hoặc mật khẩu không được để trống</p>";
+        // error.style.display="block";
+    }  
     }
 
 

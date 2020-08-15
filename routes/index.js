@@ -1,20 +1,18 @@
 var express = require('express');
 var router = express.Router();
-
+var dataHome = require("../model/databaseHomePage")
+var dataMonAn = require("../model/databaseMonAn")
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index',{title:'Homepage',title2:'Khám phá vẻ đẹp cuộc sống thông qua những tấm hình đầy sống động'});
+  res.render('index',{title:'Homepage',title2:'Khám phá vẻ đẹp cuộc sống thông qua những tấm hình đầy sống động',databaseAmThuc:dataHome.AmThuc,databaseTT:dataHome.TinTuc});
 });
 
-router.get('/vn', function(req, res, next) {
-  res.render('vn',{title:'Việt Nam',title2:'Hình ảnh Việt Nam'});
-});
+
 router.get('/GoiCuon', function(req, res, next) {
-  res.render('GoiCuon',{title:'Gỏi cuốn - Việt Nam',title2:'Gỏi cuốn - Việt Nam'});
+  res.render('AmThuc',{AmThuc:dataMonAn[0]});
 });
-
-router.get('/Dung-nhieu-le-hoi-do-dich-covid', function(req, res, next) {
-  res.render('TinTuc1',{title:'Dừng nhiều lễ hội do dịch covid-19',title2:'Tin tức du lịch'});
+router.get('/VitQuayBacKinh', function(req, res, next) {
+  res.render('AmThuc',{AmThuc:dataMonAn[1]});
 });
 
 module.exports = router;

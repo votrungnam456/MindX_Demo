@@ -150,78 +150,20 @@
 					<div class="gallery-details">
 						<div class="gallary-header text-center">
 							<h2>
-								Những hình ảnh đẹp của Việt Nam
+								<%= title3 %>
 							</h2>
 						</div><!--/.gallery-header-->
 						<div class="gallery-box">
 							<div class="gallery-content">
 								  <div class="filtr-container">
-									  <div class="row">	
-										  <div class="col-md-6">
-											  <div class="filtr-item">
-												<img src="/images/gallary/g1VN.jpg" style="height:300px;width:550px" alt="Ảnh Việt Nam"/>
-											</div><!-- /.filtr-item -->
-										  </div><!-- /.col -->
-	
-										  <div class="col-md-6">
-											  <div class="filtr-item">
-												<img src="/images/VN/VN1.jpg" style="height:300px;width:550px" alt="Ảnh Việt Nam"/>
-											</div><!-- /.filtr-item -->
-										  </div><!-- /.col -->
-
-										  <div class="col-md-6">
-											<div class="filtr-item">
-											  <img src="/images/VN/VN2.jpg" style="height:300px;width:550px" alt="Ảnh Việt Nam"/>
-										  </div><!-- /.filtr-item -->
-										</div><!-- /.col -->
-										
-										<div class="col-md-6">
-											<div class="filtr-item">
-											  <img src="/images/VN/VN3.jpg" style="height:300px;width:550px" alt="Ảnh Việt Nam"/>
-										  </div><!-- /.filtr-item -->
-										</div><!-- /.col -->
-
-										<div class="col-md-6">
-											<div class="filtr-item">
-											  <img src="/images/VN/VN4.jpg" style="height:300px;width:550px" alt="Ảnh Việt Nam"/>
-										  </div><!-- /.filtr-item -->
-										</div><!-- /.col -->
-
-										<div class="col-md-6">
-											<div class="filtr-item">
-											  <img src="/images/VN/VN5.jpg" style="height:300px;width:550px" alt="Ảnh Việt Nam"/>
-										  </div><!-- /.filtr-item -->
-										</div><!-- /.col -->
-
-										<div class="col-md-6">
-											<div class="filtr-item">
-											  <img src="/images/VN/VN6.jpg" style="height:300px;width:550px" alt="Ảnh Việt Nam"/>
-										  </div><!-- /.filtr-item -->
-										</div><!-- /.col -->
-
-										<div class="col-md-6">
-											<div class="filtr-item">
-											  <img src="/images/VN/VN7.jpg" style="height:300px;width:550px" alt="Ảnh Việt Nam"/>
-										  </div><!-- /.filtr-item -->
-										</div><!-- /.col -->
-										<div class="col-md-6">
-											<div class="filtr-item">
-											  <img src="/images/VN/VN8.jpg" style="height:300px;width:550px" alt="Ảnh Việt Nam"/>
-										  </div><!-- /.filtr-item -->
-										</div><!-- /.col -->
-
-										<div class="col-md-6">
-											<div class="filtr-item">
-											  <img src="/images/VN/VN9.jpg" style="height:300px;width:550px" alt="Ảnh Việt Nam"/>
-										  </div><!-- /.filtr-item -->
-										</div><!-- /.col -->
-
-										<div class="col-md-6">
-											<div class="filtr-item">
-											  <img src="/images/VN/VN10.jpg" style="height:300px;width:550px" alt="Ảnh Việt Nam"/>
-										  </div><!-- /.filtr-item -->
-										</div><!-- /.col -->
-
+									  <div class="row">		
+										<% for(let i = 0 ; i < database.length ; i++){ %>
+											<div class="col-md-6">
+												<div class="filtr-item">
+													<img src="<%= database[i] %>" style="height:300px;width:550px" alt="Ảnh"/>
+												</div>
+											</div>
+										<% }%>										 
 									  </div><!-- /.row -->	
 								  </div><!-- /.filtr-container-->
 							</div><!-- /.gallery-content -->

@@ -4,9 +4,7 @@ var router = express.Router();
 const loginController = require('../controllers/loginController')
 const signupController = require('../controllers/signupCotroller')
 
-router.get('/', function(req, res, next) {
-  res.send('My first API!!!');
-  });
+
 
 router.get('/signin', function(req, res, next) {
     // loginController(req,res);

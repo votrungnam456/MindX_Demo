@@ -8,7 +8,8 @@ const firebase = require("firebase/app");
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/login');
-
+var tintucRouter = require('./routes/tintuc');
+var hinhanhRouter = require('./routes/hinhanh')
 var app = express();
 
 var firebaseConfig = {
@@ -40,6 +41,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/login', loginRouter);
+app.use('/tin-tuc',tintucRouter);
+app.use('/hinh-anh',hinhanhRouter)
 
 
 // catch 404 and forward to error handler
@@ -57,5 +60,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
 
 module.exports = app;
