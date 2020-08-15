@@ -4,7 +4,7 @@ var dataHome = require("../model/databaseHomePage")
 var dataMonAn = require("../model/databaseMonAn")
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index',{title:'Homepage',title2:'Khám phá vẻ đẹp cuộc sống thông qua những tấm hình đầy sống động',databaseAmThuc:dataHome.AmThuc,databaseTT:dataHome.TinTuc});
+  res.render('index',{user:'Đăng nhập',title:'Homepage',title2:'Khám phá vẻ đẹp cuộc sống thông qua những tấm hình đầy sống động',databaseAmThuc:dataHome.AmThuc,databaseTT:dataHome.TinTuc});
 });
 
 

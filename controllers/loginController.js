@@ -20,14 +20,8 @@ async function loginController(req,res){
           }
           else{
             console.log('Đăng nhập thành công')
-            // if (typeof localStorage === "undefined" || localStorage === null) {
-            //   var LocalStorage = require('node-localstorage').LocalStorage;
-            //   localStorage = new LocalStorage('./scratch');
-            // }
-             
-            // localStorage.setItem('user', user);
-            // console.log(localStorage.getItem('user'));
-            res.render('index',{title:'Homepage',title2:'Khám phá vẻ đẹp cuộc sống thông qua những tấm hình đầy sống động',databaseAmThuc:dataHome.AmThuc,databaseTT:dataHome.TinTuc});           
+
+            res.render('index',{user:user,title:'Homepage',title2:'Khám phá vẻ đẹp cuộc sống thông qua những tấm hình đầy sống động',databaseAmThuc:dataHome.AmThuc,databaseTT:dataHome.TinTuc});           
           }
         } catch (err) {
         //   error.innerHTML = "<p>Tài khoản hoặc mật khẩu không đúng</p>";
